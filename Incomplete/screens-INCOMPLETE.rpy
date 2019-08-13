@@ -46,28 +46,29 @@ init 1 python in mas_layout:
     QUIT_NO = store.layout.QUIT_NO
     QUIT = "Te ne stai andando senza salutarmi, [player]?"
     UNSTABLE = (
-        "ATTENZIONE: Enabling unstable mode will download updates from the " +
-        "experimental unstable branch. It is HIGHLY recommended to make a " +
-        "backup of your persistents before enabling this mode. Please report " +
-        "issues found here with an [[UNSTABLE] tag."
+        "ATTENZIONE: Attivando la modalità instabile si scaricheranno gli aggiornamenti dal " +
+        "ramo sperimentale instabile. Si raccomanda vivamente di fare " +
+        "un backup dei file 'persistent' prima di attivare questa modalità. Si prega " +
+        "di segnalare i problemi trovati qui con un tag [[UNSTABLE]."
+         
     )
 
 
-    QUIT_YES_BROKEN = "You could at least pretend that you care."
+    QUIT_YES_BROKEN = "Potresti almeno fingere di interessarti"
     QUIT_YES_DIS = ":("
     QUIT_YES_AFF = "T_T [player]..."
 
 
-    QUIT_NO_BROKEN = "{i}Now{/i} you listen?"
-    QUIT_NO_UPSET = "Thanks for being considerate, [player]."
+    QUIT_NO_BROKEN = "{i}Ora{/i} mi ascolti?"
+    QUIT_NO_UPSET = "Grazie per essere stato premuroso., [player]."
     QUIT_NO_HAPPY = ":)"
-    QUIT_NO_AFF_G = "Good [boy]."
-    QUIT_NO_AFF_GL = "Good. :)"
-    QUIT_NO_LOVE = "<3 u"
+    QUIT_NO_AFF_G = "Bravo." # i think the [boy] variable is useless so i removed it from here
+    QUIT_NO_AFF_GL = "Brava. :)"
+    QUIT_NO_LOVE = "Ti <3"
 
 
-    QUIT_BROKEN = "Just go."
-    QUIT_AFF = "Why are you here?\n Click 'No' and use the 'Goodbye' button, silly!"
+    QUIT_BROKEN = "Vai via."
+    QUIT_AFF = "Perchè sei qui?\n Clicca 'No' e usa il pulsante 'Goodbye' scemetto!" #BHO
 
     if store.persistent.gender == "M" or store.persistent.gender == "F":
         _usage_quit_aff = QUIT_NO_AFF_G
@@ -541,21 +542,21 @@ screen quick_menu():
 
 
 
-            textbutton _("History") action Function(_mas_quick_menu_cb, "history")
+            textbutton _("History") action Function(_mas_quick_menu_cb, "history") #BHO
 
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+            textbutton _("Salta") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
 
 
-            textbutton _("Save") action Function(_mas_quick_menu_cb, "save")
+            textbutton _("Salva") action Function(_mas_quick_menu_cb, "save")
 
 
-            textbutton _("Load") action Function(_mas_quick_menu_cb, "load")
+            textbutton _("Carica") action Function(_mas_quick_menu_cb, "load")
 
 
 
 
-            textbutton _("Settings") action Function(_mas_quick_menu_cb, "preferences")
+            textbutton _("Impostazioni") action Function(_mas_quick_menu_cb, "preferences")
 
 
 
@@ -606,24 +607,24 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Just Monika") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Please enter your name", ok_action=Function(FinishEnterName)))
+            textbutton _("Just Monika") action If(persistent.playername, true=Start(), false=Show(screen="name_input", message="Inserisci il tuo nome", ok_action=Function(FinishEnterName)))
 
         else:
 
             textbutton _("History") action [ShowMenu("history"), SensitiveIf(renpy.get_screen("history") == None)]
 
-            textbutton _("Save Game") action [ShowMenu("save"), SensitiveIf(renpy.get_screen("save") == None)]
+            textbutton _("Salva") action [ShowMenu("save"), SensitiveIf(renpy.get_screen("save") == None)]
 
-        textbutton _("Load Game") action [ShowMenu("load"), SensitiveIf(renpy.get_screen("load") == None)]
+        textbutton _("Carica") action [ShowMenu("load"), SensitiveIf(renpy.get_screen("load") == None)]
 
         if _in_replay:
 
             textbutton _("End Replay") action EndReplay(confirm=True)
 
         elif not main_menu:
-            textbutton _("Main Menu") action NullAction(), Show(screen="dialog", message="No need to go back there.\nYou'll just end up back here so don't worry.", ok_action=Hide("dialog"))
+            textbutton _("Menu principale") action NullAction(), Show(screen="dialog", message="No need to go back there.\nYou'll just end up back here so don't worry.", ok_action=Hide("dialog"))
 
-        textbutton _("Settings") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
+        textbutton _("Impostazioni") action [ShowMenu("preferences"), SensitiveIf(renpy.get_screen("preferences") == None)]
 
         if store.mas_windowreacts.can_show_notifs and not main_menu:
             textbutton _("Alerts") action [ShowMenu("notif_settings"), SensitiveIf(renpy.get_screen("notif_settings") == None)]
@@ -633,10 +634,10 @@ screen navigation():
         if renpy.variant("pc"):
 
 
-            textbutton _("Help") action Help("README.html")
+            textbutton _("Aiuto") action Help("README.html")
 
 
-            textbutton _("Quit") action Quit(confirm=_confirm_quit)
+            textbutton _("Esci") action Quit(confirm=_confirm_quit)
 
 
 style navigation_button is gui_button
@@ -962,7 +963,7 @@ screen load() tag menu:
 init python:
     def FileActionMod(name, page=None, **kwargs):
         if renpy.current_screen().screen_name[0] == "save":
-            return Show(screen="dialog", message="There's no point in saving anymore.\nDon't worry, I'm not going anywhere.", ok_action=Hide("dialog"))
+            return Show(screen="dialog", message="Non ha piu' senso salvare.\nNon preoccuparti, non vado da nessuna parte.", ok_action=Hide("dialog"))
 
 
 screen file_slots(title):
@@ -1108,8 +1109,8 @@ screen preferences() tag menu:
                     vbox:
                         style_prefix "radio"
                         label _("Display")
-                        textbutton _("Window") action Preference("display", "window")
-                        textbutton _("Fullscreen") action Preference("display", "fullscreen")
+                        textbutton _("Finestra") action Preference("display", "window")
+                        textbutton _("Schermo Intero") action Preference("display", "fullscreen")
 
 
 
@@ -1121,9 +1122,9 @@ screen preferences() tag menu:
 
                 vbox:
                     style_prefix "check"
-                    label _("Graphics")
-                    textbutton _("Disable Animation") action ToggleField(persistent, "_mas_disable_animations")
-                    textbutton _("Change Renderer") action Function(renpy.call_in_new_context, "mas_gmenu_start")
+                    label _("Grafica")
+                    textbutton _("Disattiva Animazioni") action ToggleField(persistent, "_mas_disable_animations")
+                    textbutton _("Cambia Rendering") action Function(renpy.call_in_new_context, "mas_gmenu_start")
 
 
                 vbox:
@@ -1140,7 +1141,7 @@ screen preferences() tag menu:
                             selected persistent._mas_unstable_mode
                             hovered tooltip.Action(layout.MAS_TT_UNSTABLE)
 
-                    textbutton _("Repeat Topics"):
+                    textbutton _("Ripeti conversazioni"):
                         action ToggleField(persistent,"_mas_enable_random_repeats", True, False)
                         hovered tooltip.Action(layout.MAS_TT_REPEAT)
 
@@ -1231,7 +1232,7 @@ screen preferences() tag menu:
                 vbox:
 
                     hbox:
-                        label _("Sunrise   ")
+                        label _("Alba   ")
 
 
                         label _("[[ " + sr_display + " ]")
@@ -1240,7 +1241,7 @@ screen preferences() tag menu:
 
 
                     hbox:
-                        label _("Sunset   ")
+                        label _("Tramonto   ")
 
 
                         label _("[[ " + ss_display + " ]")
@@ -1251,7 +1252,7 @@ screen preferences() tag menu:
                 vbox:
 
                     hbox:
-                        label _("Random Chatter   ")
+                        label _("Chiacchiere casuali   ")
 
 
                         label _("[[ " + rc_display + " ]")
@@ -1260,14 +1261,14 @@ screen preferences() tag menu:
                     range=6, style="slider")
 
                     hbox:
-                        label _("Ambient Volume")
+                        label _("Volume dell'ambiente")
 
                     bar value Preference("mixer amb volume")
 
 
                 vbox:
 
-                    label _("Text Speed")
+                    label _("Velocità testo")
 
 
                     bar value FieldValue(_preferences, "text_cps", range=170, max_is_zero=False, style="slider", offset=30)
@@ -1279,14 +1280,14 @@ screen preferences() tag menu:
                 vbox:
 
                     if config.has_music:
-                        label _("Music Volume")
+                        label _("Volume Musica")
 
                         hbox:
                             bar value Preference("music volume")
 
                     if config.has_sound:
 
-                        label _("Sound Volume")
+                        label _("Volume Suoni")
 
                         hbox:
                             bar value Preference("sound volume")
@@ -1296,7 +1297,7 @@ screen preferences() tag menu:
 
 
                     if config.has_voice:
-                        label _("Voice Volume")
+                        label _("Volume Voce")
 
                         hbox:
                             bar value Preference("voice volume")
@@ -1307,13 +1308,13 @@ screen preferences() tag menu:
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
 
-                        textbutton _("Mute All"):
+                        textbutton _("Silenzia tutto"):
                             action Preference("all mute", "toggle")
                             style "mute_all_button"
 
 
             hbox:
-                textbutton _("Update Version"):
+                textbutton _("Aggiorna"):
                     action Function(renpy.call_in_new_context, 'forced_update_now')
                     style "navigation_button"
 
@@ -1425,17 +1426,17 @@ screen notif_settings() tag menu:
             style_prefix "check"
             hbox:
                 spacing 25
-                textbutton _("Use Notifications"):
+                textbutton _("Usa le notifiche"):
                     action ToggleField(persistent, "_mas_enable_notifications")
                     selected persistent._mas_enable_notifications
                     hovered tooltip.Action(layout.MAS_TT_NOTIF)
 
-                textbutton _("Sounds"):
+                textbutton _("Suoni"):
                     action ToggleField(persistent, "_mas_notification_sounds")
                     selected persistent._mas_notification_sounds
                     hovered tooltip.Action(layout.MAS_TT_NOTIF_SOUND)
 
-            label _("Alert Filters")
+            label _("Alert Filtri") #BHO
 
         hbox:
             style_prefix "check"
@@ -1838,7 +1839,7 @@ screen confirm(message, yes_action, no_action):
                 textbutton _("-") action yes_action
                 textbutton _("-") action yes_action
             else:
-                textbutton _("Yes") action [SetField(persistent, "_mas_game_crashed", False), Show(screen="quit_dialog", message=layout.QUIT_YES, ok_action=yes_action)]
+                textbutton _("Si") action [SetField(persistent, "_mas_game_crashed", False), Show(screen="quit_dialog", message=layout.QUIT_YES, ok_action=yes_action)]
                 textbutton _("No") action no_action, Show(screen="dialog", message=layout.QUIT_NO, ok_action=Hide("dialog"))
 
 
@@ -1894,17 +1895,17 @@ screen update_check(ok_action, cancel_action, mode):
             spacing 30
 
         if mode == 0:
-            label _('An update is now avalable!'):
+            label _('Aggiornamento disponibile!'):
                 style "confirm_prompt"
                 xalign 0.5
 
         elif mode == 1:
-            label _("No update available."):
+            label _("Nessun aggiornamento trovato."):
                 style "confirm_prompt"
                 xalign 0.5
 
         elif mode == 2:
-            label _('Checking for updates...'):
+            label _('Cerco aggiornamenti...'):
                 style "confirm_prompt"
                 xalign 0.5
         else:
@@ -1917,9 +1918,9 @@ screen update_check(ok_action, cancel_action, mode):
             xalign 0.5
             spacing 100
 
-            textbutton _("Install") action [ok_action, SensitiveIf(mode == 0)]
+            textbutton _("Installa") action [ok_action, SensitiveIf(mode == 0)]
 
-            textbutton _("Cancel") action cancel_action
+            textbutton _("Cancella") action cancel_action
 
     timer 1.0 action Return("None")
 
@@ -1955,28 +1956,28 @@ screen updater:
             vbox:
 
                 if u.state == u.ERROR:
-                    text _("An error has occured:")
+                    text _("Si è verificato un errore:")
                 elif u.state == u.CHECKING:
-                    text _("Checking for updates.")
+                    text _("Cerco aggiornamenti.")
                 elif u.state == u.UPDATE_AVAILABLE:
-                    text _("Version [u.version] is available. Do you want to install it?")
+                    text _("Versione [u.version] è disponibile. Vuoi installarla?")
 
                 elif u.state == u.UPDATE_NOT_AVAILABLE:
-                    text _("Monika After Story is up to date.")
+                    text _("Monika After Story è gia aggiornato.")
                 elif u.state == u.PREPARING:
-                    text _("Preparing to download the updates.")
+                    text _("Preparazione al download.")
                 elif u.state == u.DOWNLOADING:
-                    text _("Downloading the updates. (Progress bar may not advance during download)")
+                    text _("Scarico gli aggiornamenti. (La barra di avanzamento potrebbe non avanzare durante il download)")
                 elif u.state == u.UNPACKING:
-                    text _("Unpacking the updates.")
+                    text _("Estraendo gli aggiornamenti.")
                 elif u.state == u.FINISHING:
-                    text _("Finishing up.")
+                    text _("Completo l'operazione.")
                 elif u.state == u.DONE:
-                    text _("The updates have been installed. Please reopen Monika After Story.")
+                    text _("Aggiornamento installato. Riapri Monika After Story.")
                 elif u.state == u.DONE_NO_RESTART:
-                    text _("The updates have been installed.")
+                    text _("Gli aggiornamenti sono stati installati.")
                 elif u.state == u.CANCELLED:
-                    text _("The updates were cancelled.")
+                    text _("Aggiornamenti cancellati.")
 
                 if u.message is not None:
                     null height gui._scale(10)
@@ -1991,10 +1992,10 @@ screen updater:
             spacing gui._scale(25)
 
             if u.can_proceed:
-                textbutton _("Proceed") action u.proceed
+                textbutton _("Procedi") action u.proceed
 
             if u.can_cancel:
-                textbutton _("Cancel") action Return()
+                textbutton _("Cancella") action Return()
 
 
 style updater_button_text is navigation_button_text
@@ -2022,7 +2023,7 @@ screen skip_indicator():
         has hbox:
             spacing 6
 
-        text _("Skipping")
+        text _("Salto")
 
         text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
         text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
@@ -2107,7 +2108,7 @@ style notify_text:
 
 init python:
 
-    items = [(_("Introduction"),"example_chapter")
+    items = [(_("Introduction"),"example_chapter") #????? wtf is this shit
         ,(_("Route Part 1, How To Make A Mod"),"tutorial_route_p1")
         ,(_("Route Part 2, Music"),"tutorial_route_p2")
         ,(_("Route Part 3, Scene"),"tutorial_route_p3")
@@ -2242,9 +2243,9 @@ screen twopane_scrollable_menu(prev_items, main_items, left_area, left_align, ri
             null height 20
 
             if cat_length == 0:
-                textbutton _("That's enough for now.") action Return(False)
+                textbutton _("Per ora basta.") action Return(False)
             elif cat_length > 1:
-                textbutton _("Go Back") action Return(-1)
+                textbutton _("Vai indietro") action Return(-1)
 
 
     if main_items:
@@ -2272,7 +2273,7 @@ screen twopane_scrollable_menu(prev_items, main_items, left_area, left_align, ri
 
                 null height 20
 
-                textbutton _("That's enough for now.") action Return(False)
+                textbutton _("Va bene così.") action Return(False)
 
 
 screen scrollable_menu(items, display_area, scroll_align, nvm_text, remove=None):
@@ -2405,7 +2406,7 @@ screen mas_generic_restart:
 
 
 
-        label _("Please restart Monika After Story."):
+        label _("Riavvia Monika After Story."):
             style "confirm_prompt"
             xalign 0.5
 
@@ -2456,4 +2457,4 @@ screen mas_generic_poem(_poem, paper="paper", _styletext="monika_text"):
         text "[_poem.title]\n\n[_poem.text]" style _styletext
         null height 100
     vbar value YScrollValue(viewport="vp") style "poem_vbar"
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+

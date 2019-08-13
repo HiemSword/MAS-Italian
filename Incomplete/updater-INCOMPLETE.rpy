@@ -10,8 +10,8 @@ default persistent._mas_just_updated = False
 
 
 
-define mas_updater.regular = "http://d2vycydjjutzqv.cloudfront.net/updates.json"
-define mas_updater.unstable = "http://dzfsgufpiee38.cloudfront.net/updates.json"
+define mas_updater.regular = "http://d2vycydjjutzqv.cloudfront.net/updates.json" #???
+define mas_updater.unstable = "http://dzfsgufpiee38.cloudfront.net/updates.json" #???
 
 define mas_updater.force = False
 define mas_updater.timeout = 10
@@ -145,14 +145,14 @@ init -1 python:
             
             
             button_text_cancel_idle = Text(
-                "Cancel",
+                "Cancella",
                 font=gui.default_font,
                 size=gui.text_size,
                 color="#000",
                 outlines=[]
             )
             button_text_cancel_hover = Text(
-                "Cancel",
+                "Cancella",
                 font=gui.default_font,
                 size=gui.text_size,
                 color="#fa9",
@@ -161,14 +161,14 @@ init -1 python:
             
             
             button_text_update_idle = Text(
-                "Update",
+                "Aggiorna",
                 font=gui.default_font,
                 size=gui.text_size,
                 color="#000",
                 outlines=[]
             )
             button_text_update_hover = Text(
-                "Update",
+                "Aggiorna",
                 font=gui.default_font,
                 size=gui.text_size,
                 color="#fa9",
@@ -177,14 +177,14 @@ init -1 python:
             
             
             button_text_retry_idle = Text(
-                "Retry",
+                "Riprova",
                 font=gui.default_font,
                 size=gui.text_size,
                 color="#000",
                 outlines=[]
             )
             button_text_retry_hover = Text(
-                "Retry",
+                "Riprova",
                 font=gui.default_font,
                 size=gui.text_size,
                 color="#fa9",
@@ -284,21 +284,21 @@ init -1 python:
             
             
             self._text_checking = Text(
-                "Checking for updates...",
+                "Cerco aggiornamenti...",
                 font=gui.default_font,
                 size=gui.text_size,
                 color="#ffe6f4",
                 outlines=[]
             )
             self._text_update = Text(
-                "New update available!",
+                "Aggiornamento disponibile!",
                 font=gui.default_font,
                 size=gui.text_size,
                 color="#ffe6f4",
                 outlines=[]
             )
             self._text_noupdate = Text(
-                "No update found.",
+                "Nessun aggiornamento trovato.",
                 font=gui.default_font,
                 size=gui.text_size,
                 color="#ffe6f4",
@@ -946,4 +946,4 @@ label update_now:
 
             $ persistent._update_last_checked[update_link] = time.time()
     return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+
