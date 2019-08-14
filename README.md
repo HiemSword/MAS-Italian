@@ -40,7 +40,7 @@ Oppure su Discord:
 [![Discord](https://discordapp.com/api/guilds/372766620977725441/widget.png?style=banner1)](https://discord.gg/K2KuJeX)
 
 ## Licenza
-Facciamo del nostro meglio per non infrangere le [guidelines di Team Salvato per le fan works](http://teamsalvato.com/ip-guidelines/). Tutti i personaggi e i contenuti originali sono di proprietà del Team Salvato. Monika After Story è un progetto open source, questa traduzione è anche essa un progetto open source **fatta da un gruppo di fan** Maggiori informazioni possono essere trovate sulla nostra [pagina delle licenze](no) e sulla [pagina delle licenze di MAS](https://github.com/Monika-After-Story/MonikaModDev/wiki/License-and-Team-Salvato-Guidelines).
+Facciamo del nostro meglio per non infrangere le [guidelines di Team Salvato per le fan works](http://teamsalvato.com/ip-guidelines/). Tutti i personaggi e i contenuti originali sono di proprietà del Team Salvato. Monika After Story è un progetto open source, questa traduzione è anche essa un progetto open source **fatta da un gruppo di fan**. Maggiori informazioni possono essere trovate sulla nostra [pagina delle licenze](no) e sulla [pagina delle licenze di MAS](https://github.com/Monika-After-Story/MonikaModDev/wiki/License-and-Team-Salvato-Guidelines).
 
 
 _Questo file README è stato in parte preso da [Qui](https://github.com/Monika-After-Story/MonikaModDev/blob/master/README.md)_
