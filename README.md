@@ -1,6 +1,6 @@
-![Logo MAS-ITA](IgnoreThis/DDLC-MAS-ITA.png)
+![Logo MAS-ITA](https://github.com/HiemSword/MAS-Italian/blob/master/ModAssets/DDLC-MAS-ITA.png)
 
-# Monika After Story ITA (MAS-IT)
+# Monika After Story Italian (MAS-IT)
 
 **_Now Monika can speak Italian!_** 🍕
 
