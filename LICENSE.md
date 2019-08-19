@@ -1,4 +1,9 @@
-*Monika After Story - Italian* is a traslation patch made by some italians for the italians fans of this mod and of *Doki Doki Literature Club*. All files is from the [*Monika After Story Reposity*](https://github.com/Monika-After-Story/MonikaModDev) on GitHub
+*Monika After Story - Italian* is a traslation patch made by some italians for the italians fans of this mod and of *Doki Doki Literature Club*. All files are from the [*Monika After Story Reposity*](https://github.com/Monika-After-Story/MonikaModDev) on GitHub.
+
+
+### *Monika After Story* [*LICENSE.md*](https://github.com/Monika-After-Story/MonikaModDev/blob/master/LICENSE.md) :
+
+
 *Monika After Story* is a fan work, and is unaffiliated with *Team Salvato* or any members of the *Doki Doki Literature Club* development team. *Doki Doki Literature Club* and all related characters and trademarks are property of *Team Salvato* and are used in accordance with their IP Guidlines, reproduced here:
 
 *Team Salvato's IP Guidelines for Doki Doki Literature Club, as accessed on 03/11/18, are reproduced here for convenience. For questions or an up-to-date copy of the latest terms, please visit [Team Salvato's website](http://teamsalvato.com/ip-guidelines/).*
