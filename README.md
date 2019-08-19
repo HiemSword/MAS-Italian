@@ -40,7 +40,7 @@ Oppure su Discord:
 [![Discord](https://discordapp.com/api/guilds/372766620977725441/widget.png?style=banner1)](https://discord.gg/K2KuJeX)
 
 
-## [Licenza](https://github.com/HiemSword/MAS-Italian/blob/master/LICENSE.md)
+### Per la licenza cliccca [Qui](https://github.com/HiemSword/MAS-Italian/blob/master/LICENSE.md)
 
 _Questo file README è stato in parte preso da [Qui](https://github.com/Monika-After-Story/MonikaModDev/blob/master/README.md)_
 
