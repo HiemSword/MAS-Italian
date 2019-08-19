@@ -2071,7 +2071,7 @@ label prompt_menu:
         if len(unseen_events) > 0 and persistent._mas_unsee_unseen:
             mas_showEVL('mas_show_unseen','EVE',unlock=True)
             unseen_num = len(unseen_events)
-            mas_getEV('mas_show_unseen').prompt = "Mi piacerebbe vedere 'Unseen' ([unseen_num]) di nuovo" ################BHO
+            mas_getEV('mas_show_unseen').prompt = "Mi piacerebbe vedere 'Non visti' ([unseen_num]) di nuovo" ################BHO
         else:
             mas_hideEVL('mas_show_unseen','EVE',lock=True)
 

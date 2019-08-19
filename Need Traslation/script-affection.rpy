@@ -822,7 +822,7 @@ init 15 python in mas_affection:
             talk_menu_quips[_aff] = mas_ql
         
         
-        
+        #Elenco di cose da dire durante la scelta di un argomento sul menu "Talk"
         quips = [
             "..."
         ]
@@ -830,86 +830,86 @@ init 15 python in mas_affection:
         
         
         quips = [
-            "...Yes?",
+            "...Si?",
             "...Oh?",
             "...Huh?",
             "...Hm?",
-            "We can try talking, I guess.",
-            "I guess we can talk.",
-            "Oh... You want to talk?",
-            "If you want to talk, go ahead.",
-            "We can talk if you really want to.",
-            "Are you sure you want to talk to me?",
-            "You actually want to talk to me?"
+            "Possiamo parlare, credo.",
+            "Credo possiamo parlare se vogliamo.",
+            "Oh... Vuoi parlare?",
+            "Se vuoi parlare, vai avanti.",
+            "Possiamo parlare se prorpio vuoi.",
+            "Sei sicuro di voler parlare con me?",
+            "Vuoi parlare con me?"
         ]
         save_quips(DISTRESSED, quips)
         
         
         quips = [
-            "What?",
-            "What do you want?",
-            "What now?",
-            "What is it?",
-            "Fine...we can talk.",
-            "Just...whatever, go ahead."
+            "Cosa?",
+            "Che vuoi?",
+            "Cosa c'è ora?",
+            "Che c'è?",
+            "Va bene...possiamo parlare.",
+            "Solo...fa niente, vai pure."
         ]
         save_quips(UPSET, quips)
         
         
         quips = [
-            "What would you like to talk about?"
+            "Di che cosa ti piacerebbe parlare?"
         ]
         save_quips(NORMAL, quips)
         
         
         quips = [
-            "What would you like to talk about?"
+            "Di che cosa vuoi parlare?"
         ]
         save_quips(HAPPY, quips)
         
         
         quips = [
-            "What would you like to talk about? <3",
-            "What would you like to talk about, [player]?",
-            "Yes, [player]?",
-            "What's on your mind, [player]?",
-            "What would you like to talk about, [player]?"
+            "Di che cosa ti piacerebbe parlare? <3",
+            "Di che cosa ti piacerebbe parlare, [player]?",
+            "Si, [player]?",
+            "Cosa hai in testa, [player]?",
+            "Di che cosa ti piacerebbe parlare, [player]?"
         ]
         save_quips(AFFECTIONATE, quips)
         
         
         quips = [
-            "What would you like to talk about? <3",
-            "What would you like to talk about, honey?",
-            "Yes, sweetheart?",
+            "Di che cosa ti piacerebbe parlare? <3",
+            "Di che cosa ti piacerebbe parlare, honey?", #BHO
+            "Yes, sweetheart?", #BHO
             "Yes, honey?",
-            "Yes, dear?",
+            "Yes, dear?", #BHO
             "What's on your mind, darling?",
-            "What would you like to talk about, sweetie?",
-            "What would you like to talk about, [player]?",
-            "Yes, [player]?",
-            "What's on your mind, [player]?",
-            "What would you like to talk about, [player]?"
+            "Di che cosa ti piacerebbe parlare, sweetie?",
+            "Di che cosa ti piacerebbe parlare, [player]?",
+            "Si, [player]?",
+            "Cosa hai in mente, [player]?",
+            "Di che cosa ti piacerebbe parlare, [player]?"
         ]
         save_quips(ENAMORED, quips)
         
         
         quips = [
 
-            "What's on your mind?",
-            "What's on your mind, darling?",
-            "Anything on your mind?",
-            "What's up, honey?",
-            "What's up, dear?",
-            "What's up, sweetie?",
+            "Cosa hai in testa?",
+            "What's on your mind, darling?", #BHO
+            "Anything on your mind?", #BHO
+            "Cosa c'è, honey?",
+            "Cosa c'è, dear?",
+            "Cosa c'è, sweetie?",
 
-            "Yes, sweetheart?",
-            "Yes, honey?",
-            "Yes, dear?",
+            "Si, sweetheart?",
+            "Si, honey?",
+            "Si, dear?",
             "^_^",
             "<3",
-            "Anything you'd like to talk about?",
-            "We can talk about anything you like, [player]."
+            "Anything you'd like to talk about?", #BHO
+            "Possiamo parlare di qualsiasi cosa ti venga in mente, [player]."
         ]
         save_quips(LOVE, quips)
 
@@ -925,7 +925,7 @@ init 15 python in mas_affection:
                 mas_ql.addLineQuip(_quip)
             play_menu_quips[_aff] = mas_ql
         
-        
+        #Elenco di cose da dire durante la scelta di un gioco sul menu "Play"
         
         quips = [
             "..."
@@ -934,19 +934,19 @@ init 15 python in mas_affection:
         
         
         quips = [
-            "...Sure.",
-            "...Fine.",
-            "I guess we can play a game.",
-            "I guess, if you really want to.",
-            "I suppose a game would be fine."
+            "...Certo.",
+            "...Va bene.",
+            "Credo che possiamo giocare.",
+            "Va bene credo, se proprio vuoi.",
+            "Suppongo che giocare vada bene."
         ]
         save_quips(DISTRESSED, quips)
         
         
         quips = [
-            "...Which game?",
-            "Okay...whatever, choose a game.",
-            "Fine, pick a game."
+            "...A che gioco?",
+            "Okay...fa niente, scegli un gioco.",
+            "Va bene, secgli un gioco."
         ]
         save_quips(UPSET, quips)
         
@@ -1024,7 +1024,7 @@ init 15 python in mas_affection:
         quip = _dict_quip(talk_menu_quips)
         if len(quip) > 0:
             return quip
-        return "What would you like to talk about?"
+        return "Di che cosa ti piacerebbe parlare?"
 
 
     def play_quip():

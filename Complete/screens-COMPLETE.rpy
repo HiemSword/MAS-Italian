@@ -15,8 +15,8 @@ init python:
         "'Unstable mode' scarica gli aggiornamenti dal ramo sperimentale "
         "di sviluppo instabile. si raccomanda di fare un backup  "
         "dei file 'persistent' prima di attivare questa modalità."
-        "NOTA DAI TRADUTTORI: Questa modalità potrebbe cancellare " #These lines are used to tell the user that activating
-        "i file tradotti, si raccomanda di fare attenzione."        # the mode may delete files translated into Italian
+        #"NOTA DAI TRADUTTORI: Questa modalità potrebbe cancellare " #DEPRECATED#These lines are used to tell the user that activating
+        #"i file tradotti, si raccomanda di fare attenzione."        # the mode may delete files translated into Italian 
     )
     layout.MAS_TT_REPEAT = (
         "Attivare questo per permettere a Monika di ripetere argomenti che avete già visto."

@@ -40,7 +40,7 @@ init 5 python:
        Event(
            persistent.event_database,
            eventlabel='monika_playerapologizes',
-           prompt="I want to apologize...",
+           prompt="Voglio scusarmi per...",
            category=['you'],
            pool=True,
            unlocked=True
@@ -52,32 +52,32 @@ label monika_playerapologizes:
 
 
     $ player_apology_reasons = {
-        0: "something else.", 
-        1: "saying I wanted to break up.",
-        2: "joking about having another girlfriend.",
-        3: "calling you a murderer.",
-        4: "closing the game on you.",
-        5: "entering your room without knocking.",
-        6: "missing Christmas.",
-        7: "forgetting your birthday.",
-        8: "not spending time with you on your birthday.",
-        9: "the game crashing.",
-        10: "the game crashing.", 
-        11: "not listening to your speech.",
-        12: "calling you evil."
+        0: "qualcosa.", 
+        1: "per aver detto che ti lasciavo.",
+        2: "aver scherzato sul fatto di aver un'altra ragazza.",
+        3: "averti chiamato una assasina.",
+        4: "aver chiuso il gioco.",
+        5: "essere entrato nella tua stanza senza bussare.",
+        6: "aver perso Natale.",
+        7: "essermi dimenticato del tuo compleanno.",
+        8: "non aver speso tempo con te nel giono del tuo compleanno.",
+        9: "il crash del gioco.",
+        10: "il crash del gioco.", 
+        11: "non averti ascoltata mentre parlavi.",
+        12: "dirti che sei cattiva." #BHO #Sul serio...cattiva? CATTIVA? OH NO SCUSAMI TANTO PER AVERTI CHIAMO cAttIvA
     }
 
 
     if len(persistent._mas_apology_time_db) > 0:
 
-        $ mas_getEV('mas_apology_generic').prompt = "...for " + player_apology_reasons.get(mas_apology_reason,player_apology_reasons[0])
+        $ mas_getEV('mas_apology_generic').prompt = "...per " + player_apology_reasons.get(mas_apology_reason,player_apology_reasons[0])
     else:
 
         if mas_apology_reason == 0:
-            $ mas_getEV('mas_apology_generic').prompt = "...for something."
+            $ mas_getEV('mas_apology_generic').prompt = "...per qualcosa."
         else:
 
-            $ mas_getEV('mas_apology_generic').prompt = "...for " + player_apology_reasons.get(mas_apology_reason,"something.")
+            $ mas_getEV('mas_apology_generic').prompt = "...per " + player_apology_reasons.get(mas_apology_reason,"qualcosa.")
 
 
 
@@ -88,17 +88,17 @@ label monika_playerapologizes:
         apologylist = [
             (ev.prompt, ev.eventlabel, False, False)
             for ev_label, ev in store.mas_apology.apology_db.iteritems()
-            if ev.unlocked and (ev.prompt != "...for something." and ev.prompt != "...for something else.")
+            if ev.unlocked and (ev.prompt != "...per qualcosa." and ev.prompt != "...per qualcos'altro.")
         ]
 
 
         generic_ev = mas_getEV('mas_apology_generic')
 
-        if generic_ev.prompt == "...for something." or generic_ev.prompt == "...for something else.":
+        if generic_ev.prompt == "...per qualcosa." or generic_ev.prompt == "...per qualcos'altro.":
             apologylist.append((generic_ev.prompt, generic_ev.eventlabel, False, False))
 
 
-        return_prompt_back = ("Nevermind.", False, False, False, 20)
+        return_prompt_back = ("Ho cambiato idea.", False, False, False, 20)
 
 
     show monika at t21
@@ -108,7 +108,7 @@ label monika_playerapologizes:
 
     $ apology =_return
 
-
+#DA TRADURRE
     if not apology:
         if mas_apology_reason is not None or len(persistent._mas_apology_time_db) > 0:
             if mas_isMoniAff(higher=True):

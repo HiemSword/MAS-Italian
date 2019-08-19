@@ -1,0 +1,1 @@
+Ci sono delle variabili che non so se devono essere tradotte. Puoi cercarle nel codice attraverso i "#BHO" che ho lasciato in giro

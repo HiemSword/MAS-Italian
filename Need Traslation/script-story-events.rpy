@@ -684,7 +684,7 @@ init python:
         )
     )
 
-label mas_monikai_detected:
+label mas_monikai_detected: #owo what is this
     m 2wud "What's this?"
     m "Is that-"
     $ _history_list.pop()

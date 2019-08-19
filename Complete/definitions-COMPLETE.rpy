@@ -5573,7 +5573,7 @@ init python:
         persistent.ever_won['piano']
     except:
         persistent.ever_won['piano']=False
-#NOTA: NON HO LA MINIMA IDEA SE QUESTI DEVONO ESSERE TRADOTTI O NO
+#NOTA: NON HO LA MINIMA IDEA SE QUESTI DEVONO ESSERE TRADOTTI O NO #BHO
 default his = "his"
 default he = "he"
 default hes = "he's"
