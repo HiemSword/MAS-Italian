@@ -16,12 +16,7 @@ Questa è una patch di traduzione **non ufficiale** della mod per DDLC "[Monika 
 
  * Estrai i contenuti del file nella cartella `/game` di DDLC (Se chiesto, sovrascrivere i file).
 
- * Fatto! Ora Monika parlera con te in Italiano!
-
-Se hai dei problemi con l'installazione guarda le [FAQ](http://PLACEHOLDER.example/FAQ).
-
-## Come contribuire a MAS-Italian
-
+ * Fatto! Ora Monika parlera con te in Italiano!pirupiru
 ### Bugs e Suggerimenti
 Se hai riscontrato dei bug e vorresti segnalarli, clicca [Qui](http://PLACEHOLDER.example/Bug).
 
