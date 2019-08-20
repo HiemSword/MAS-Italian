@@ -881,11 +881,11 @@ init 15 python in mas_affection:
         quips = [
             "Di che cosa ti piacerebbe parlare? <3",
             "Di che cosa ti piacerebbe parlare, honey?", #BHO
-            "Yes, sweetheart?", #BHO
-            "Yes, honey?",
-            "Yes, dear?", #BHO
-            "What's on your mind, darling?",
-            "Di che cosa ti piacerebbe parlare, sweetie?",
+            "Si, tesoro?", #BHO
+            "Sì, cara?",
+            "Sì, mia cara?", #BHO
+            "A cosa stai pensando, tesoro?",
+            "Di che cosa ti piacerebbe parlare, tesoro?",
             "Di che cosa ti piacerebbe parlare, [player]?",
             "Si, [player]?",
             "Cosa hai in mente, [player]?",
@@ -897,18 +897,18 @@ init 15 python in mas_affection:
         quips = [
 
             "Cosa hai in testa?",
-            "What's on your mind, darling?", #BHO
-            "Anything on your mind?", #BHO
-            "Cosa c'è, honey?",
-            "Cosa c'è, dear?",
-            "Cosa c'è, sweetie?",
+            "Che cosa hai in mente, tesoro?", #BHO
+            "Non ti viene in mente niente?", #BHO
+            "Cosa c'è, tesoro?",
+            "Cosa c'è, caro?",
+            "Cosa c'è, tesoruccio?",
 
-            "Si, sweetheart?",
-            "Si, honey?",
-            "Si, dear?",
+            "Si, tesoro?",
+            "Si, tesoro?",
+            "Si, caro?",
             "^_^",
             "<3",
-            "Anything you'd like to talk about?", #BHO
+            "C'è qualcosa di cui vorresti parlare?", #BHO
             "Possiamo parlare di qualsiasi cosa ti venga in mente, [player]."
         ]
         save_quips(LOVE, quips)
