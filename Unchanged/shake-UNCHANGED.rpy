@@ -54,4 +54,4 @@ init:
                           **properties)
 
         Shake = renpy.curry(_Shake)
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+
