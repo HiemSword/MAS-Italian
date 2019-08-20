@@ -16,7 +16,7 @@ Questa è una patch di traduzione **non ufficiale** della mod per DDLC "[Monika 
 
  * Estrai i contenuti del file nella cartella `/game` di DDLC (Se chiesto, sovrascrivere i file).
 
- * Fatto! Ora Monika parlera con te in Italiano!pirupiru
+ * Fatto! Ora Monika parlera con te in Italiano!
 ### Bugs e Suggerimenti
 Se hai riscontrato dei bug e vorresti segnalarli, clicca [Qui](http://PLACEHOLDER.example/Bug).
 
