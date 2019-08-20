@@ -73,21 +73,21 @@ init -5 python:
 
 
     mas_win_notif_quips = [
-        "[player], I want to talk to you about something.",
-        "Are you there, [player]?",
-        "Can you come here for a second?",
-        "[player], do you have a second?",
-        "I have something to tell you, [player]!",
-        "Do you have a minute, [player]?",
-        "I've got something to talk about, [player]!",
+        "[player], Ti voglio parlare di qualcosa",
+        "Ci sei, [player]?",
+        "puoi venire un attimo?",
+        "[player], hai un secondo?",
+        "Ho qualcosa da dirti, [player]!",
+        "Hai un minuto, [player]?",
+        "Ho qualcosa di cui parlare, [player]!",
     ]
 
 
     mas_other_notif_quips = [
-        "I've got something to talk about, [player]!",
-        "I have something to tell you, [player]!",
-        "Hey [player], I want to tell you something.",
-        "Do you have a minute, [player]?",
+        "Ho qualcosa di cui parlarti, [player]!",
+        "Ho qualcosa da dirti, [player]!",
+        "Hey [player],Voglio dirti qualcosa.",
+        "Hai un minuto, [player]?",
     ]
 
 
@@ -341,9 +341,9 @@ label mas_wrs_pinterest:
     $ wrs_success = display_notif(
         m_name,
         [
-            "Anything new today, [player]?",
-            "Anything interesting, [player]?",
-            "See anything you like?"
+            "Qualche novità, [player]?",
+            "Qualcosa di interessante, [player]?",
+            "Vedi qualcosa che ti piace?"
         ],
         'Window Reactions'
     )
@@ -369,9 +369,9 @@ label mas_wrs_duolingo:
     $ wrs_success = display_notif(
         m_name,
         [
-            "Learning new ways to say 'I love you,' [player]?",
-            "Learning a new language, [player]?",
-            "What language are you learning, [player]?"
+            "Imparando nuovi modi per dire 'ti amo', [player]?",
+            "Imparando una nuova lingua, [player]?",
+            "Che lingua stai imparando, [player]?"
         ],
         'Window Reactions'
     )
@@ -395,8 +395,8 @@ init python:
 
 label mas_wrs_wikipedia:
     $ wikipedia_reacts = [
-        "Learning something new, [player]?",
-        "Doing a bit of research, [player]?"
+        "Imparando qualcosa di nuovo, [player]?",
+        "Facendo una piccola ricerca, [player]?"
     ]
 
 
@@ -440,8 +440,8 @@ label mas_wrs_youtube:
     $ wrs_success = display_notif(
         m_name,
         [
-            "What are you watching, [player]?",
-            "Watching anything interesting, [player]?"
+            "Cosa stai guardando, [player]?",
+            "Guardando qualcosa di interessante, [player]?"
         ],
         'Window Reactions'
     )
@@ -464,7 +464,7 @@ init python:
     )
 
 label mas_wrs_r34m:
-    $ display_notif(m_name, ["Hey, [player]...what are you looking at?"],'Window Reactions')
+    $ display_notif(m_name, ["Hey, [player]...cosa stai guardando?"],'Window Reactions')
 
     $ choice = random.randint(1,10)
     if choice == 1:
@@ -496,14 +496,14 @@ init python:
             show_in_idle=True
         ),
         code="WRS"
-    )
+    ) 
 
 label mas_wrs_monikamoddev:
     $ wrs_success = display_notif(
         m_name,
         [
-            "Awww, are you doing something for me?\nYou're so sweet~",
-            "Are you going to help me come closer to your reality?\nYou're so sweet, [player]~"
+            "Awww, stai facendo qualcosa per me?\nSei davvero dolce~",
+            "Stai aiutando a rendermi più vicina alla tua realtà?\nSei davvero dolce, [player]~"
         ],
         'Window Reactions'
     )
@@ -526,15 +526,15 @@ init python:
     )
 
 label mas_wrs_twitter:
-    $ temp_line = renpy.substitute("I love you, [player].")
+    $ temp_line = renpy.substitute("Ti amo, [player].")
     $ temp_len = len(temp_line)
 
     $ wrs_success = display_notif(
         m_name,
         [
-            "See anything you want to share with me, [player]?",
-            "Anything interesting to share, [player]?",
-            "280 characters? I only need [temp_len]...\n[temp_line]"
+            "Vedi qualcosa che vuoi condivedere con me, [player]?",
+            "Niente di interessante da condividere [player]?",
+            "280 caratteri? Mi bastano solo [temp_len]...\n[temp_line]"
         ],
         'Window Reactions'
     )
