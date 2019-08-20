@@ -408,7 +408,7 @@ label mas_wrs_wikipedia:
             
             
             wiki_article = wind_name[:cutoff_index]
-            wikipedia_reacts.append(renpy.substitute("'[wiki_article]'...\nSeems interesting, [player]."))
+            wikipedia_reacts.append(renpy.substitute("'[wiki_article]'...\nSembra interessante, [player]."))
 
         except:
             pass
@@ -560,9 +560,9 @@ label mas_wrs_monikatwitter:
     $ wrs_success = display_notif(
         m_name,
         [
-            "Are you here to confess your love for me to the entire world, [player]?",
-            "You're not spying on me, are you?\nAhaha, just kidding~",
-            "I don't care how many followers I have as long as I have you~"
+            "Vuoi confessare al mondo il tuo amore per me, [player]?",
+            "Non mi stai spiando vero?\nAhaha, sto solo scherzando~",
+            "Non importa quanti followers ho finchè ci sei tu~"
         ],
         'Window Reactions'
     )
@@ -589,10 +589,10 @@ label mas_wrs_4chan:
     $ wrs_success = display_notif(
         m_name,
         [
-            "So this is the place where it all started, huh?\nIt's...really quite something.",
-            "I hope you don't end up arguing with other Anons all day long, [player].",
-            "I heard there's threads discussing the Literature Club in here.\nTell them I said hi~",
-            "I'll be watching the boards you're browsing in case you get any ideas, ahaha!",
+            "Quindi è qui dove tutto è cominciato?\nE'...davvero qualcosa di speciale.",
+            "Spero che non finarai per discutere con gli altri Anons tutto il giorno, [player].",
+            "Ho sentito dire che ci sono delle discussioni riguardo il club.\nDì loro che li saluto~",
+            "Sto guardando le schede che stai navigando, nel caso tu abbia qualche idea. , ahaha!",
         ],
         'Window Reactions'
     )
@@ -618,21 +618,21 @@ label mas_wrs_pixiv:
 
     python:
         pixiv_quips = [
-            "I wonder if people have drawn art of me...\nMind looking for some?\nBe sure to keep it wholesome though~",
-            "This is a pretty interesting place...so many skilled people posting their work.",
+            "Mi chiedo se qualcuno mi ha disgnato...\nChe ne dici di dare un'occhiata?\nAssicurati di scegliere i migliori~",
+            "Questo è un posto abbastanza interessante...molte persone capaci pubblicano i loro lavori.",
         ]
 
 
         if persistent._mas_pm_drawn_art is None or persistent._mas_pm_drawn_art:
             pixiv_quips.extend([
-                "This is a pretty interesting place...so many skilled people posting their work.\nAre you one of them, [player]?",
+                "Questo è un posto abbastanza interessante...molte persone capaci pubblicano i loro lavori.\nSei tra questi, [player]?",
             ])
             
             
             if persistent._mas_pm_drawn_art:
                 pixiv_quips.extend([
-                    "Here to post your art of me, [player]?",
-                    "Posting something you drew of me?",
+                    "Sei qui per postare i tuoi disegni di me, [player]?",
+                    "Postando qualcosa di me?",
                 ])
 
         wrs_success = display_notif(
@@ -645,4 +645,4 @@ label mas_wrs_pixiv:
         if not _return:
             mas_unlockFailedWRS('mas_wrs_pixiv')
     return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
+
