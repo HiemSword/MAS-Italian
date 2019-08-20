@@ -946,52 +946,52 @@ init 15 python in mas_affection:
         quips = [
             "...A che gioco?",
             "Okay...fa niente, scegli un gioco.",
-            "Va bene, secgli un gioco."
+            "Va bene, scegli un gioco."
         ]
         save_quips(UPSET, quips)
         
         
         quips = [
-            "What would you like to play?",
-            "What did you have in mind?",
-            "Anything specific you'd like to play?"
+            "A che cosa ti piacerebbe giocare",
+            "Cosa hai in mente?",
+            "Qualcosa di specifico che vorresti giocare?"
         ]
         save_quips(NORMAL, quips)
         
         
         quips = [
-            "What would you like to play?",
-            "What did you have in mind?",
-            "Anything specific you'd like to play?"
+            "A cosa ti piacerebbe giocare?",
+            "Che cosa avevi in mente?",
+            "Vuoi giocare a qualcosa di specifico?"
         ]
         save_quips(HAPPY, quips)
         
         
         quips = [
-            "What would you like to play? <3",
-            "Choose anything you like, [player].",
-            "Pick anything you like, [player]."
+            "Cosa ti piacerebbe giocare? <3",
+            "Scegli qualsiasi cosa ti piace, [player].",
+            "Scegli qualsiasi cosa ti piaccia, [player]."
         ]
         save_quips(AFFECTIONATE, quips)
         
         
         quips = [
-            "What would you like to play? <3",
-            "Choose anything you like, [player].",
-            "Pick anything you like, [player].",
-            "Choose anything you like, honey.",
-            "Pick anything you like, sweetheart."
+            "A cosa ti piacerebbe giocare? <3",
+            "Scegli qualsiasi cosa ti piace, [player].",
+            "Scegli qualsiasi cosa ti piaccia, [player].",
+            "Scegli qualsiasi cosa ti piaccia, tesoro.",
+            "Scegli tutto quello che ti piace, tesoro.."
         ]
         save_quips(ENAMORED, quips)
         
         
         quips = [
-            "What would you like to play? <3",
-            "Choose anything you like, honey.",
-            "Pick anything you like, sweetheart.",
-            "Yay! Let's play together!",
-            "I'd love to play something with you!",
-            "I'd love to play with you!"
+            "A che cosa ti piacerebbe giocare? <3",
+            "Scegli quello che ti piace, tesoro.",
+            "Scegli quello che vuoi, tesoro.",
+            "Yay! Giochiamo insieme!",
+            "Mi piacerebbe giocare a qualcosa con te!",
+            "Mi piacerebbe giocare con te!"
         ]
         save_quips(LOVE, quips)
 
@@ -1034,7 +1034,7 @@ init 15 python in mas_affection:
         quip = _dict_quip(play_menu_quips)
         if len(quip) > 0:
             return quip
-        return "What would you like to play?"
+        return "A cosa ti piacerebbe giocare?"
 
 
 
