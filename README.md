@@ -8,7 +8,7 @@ This is an **unofficial** translation patch of the DDLC mod "[Monika After Story
 
 Questa è una patch di traduzione **non ufficiale** della mod per DDLC "[Monika After Story](https://github.com/Monika-After-Story/MonikaModDev)"
 
-### Installazione
+### Installazione ATTENZIONE! LE ISTRUZIONI QUI SOTTO SONO SOLO UN PLACEHOLDER!
 
  * Vai [qui](http://PLACEHOLDER.example/releases) per andare sulla pagina di download di MAS + i file di traduzione.
 

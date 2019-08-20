@@ -377,7 +377,7 @@ screen music_menu_ov(music_page, page_num=0, more_pages=False):
         hbox:
             # dynamic prevous text, so we can keep button size alignments
             if page_num > 0:
-                textbutton _("<<<< Prev"):
+                textbutton _("<<<< Indietro"):
                     style "music_menu_prev_button"
                     action Return(page_num - 1)
 
@@ -387,7 +387,7 @@ screen music_menu_ov(music_page, page_num=0, more_pages=False):
                     sensitive False
 
             if more_pages:
-                textbutton _("Next >>>>"):
+                textbutton _("Avanti >>>>"):
                     style "music_menu_return_button"
                     action Return(page_num + 1)
         style "music_menu_outer_frame"
@@ -430,7 +430,7 @@ screen music_menu_ov(music_page, page_num=0, more_pages=False):
             style "music_menu_return_button"
             action Return(return_value)
 
-    label "Music Menu"
+    label "Musica"
 
 
 # sets locks and calls the appropriate screen
