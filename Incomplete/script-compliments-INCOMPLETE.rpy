@@ -1,3 +1,9 @@
+###########################################
+###  Traslated in italian by Moon595  ###
+###########################################
+
+
+
 init offset = 5
 
 
@@ -26,14 +32,14 @@ init -6 python in mas_compliments:
     compliment_database = dict()
 
     thanking_quips = [
-        "You're so sweet, [player].",
-        "I love it when you compliment me, [player].",
-        "Thanks for saying that again, [player]!",
-        "Thanks for telling me that again, my love!",
-        "You always make me feel special, [player].",
+        "Sei così dolce, [player].",
+        "Adoro quando mi fai complimenti, [player].",
+        "Grazie di averlo detto di nuovo, [player]!",
+        "Grazie di averlo detto ancora, amore mio!",
+        "Mi fai sempre sentire speciale, [player].",
         "Aww, [player]~",
-        "Thanks, [player]!",
-        "You always flatter me, [player]."
+        "Grazie, [player]!",
+        "Mi lusinghi sempre, [player]."
         ]
 
 
@@ -86,7 +92,7 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_beautiful",
-            prompt="You're beautiful!",
+            prompt="Sei bellissima!",
             unlocked=True
         ),
         code="CMP")
@@ -99,22 +105,22 @@ label mas_compliment_beautiful:
     return
 
 label mas_compliment_beautiful_2:
-    m 1lubfb "Oh, gosh [player]..."
-    m 1hubfb "Thank you for the compliment."
-    m 2ekbfb "I love it when you say things like that~"
-    m 1ekbfa "To me, you're the most beautiful person in the world!"
+    m 1lubfb "Oh, [player]..."
+    m 1hubfb "Grazie per il complimento."
+    m 2ekbfb "Amo quando mi dici queste cose~"
+    m 1ekbfa "Per me sei la persona più bella al mondo!"
     menu:
-        "You're the most beautiful person to me, too.":
+        "Per me sei tu la più bella.":
             $ mas_gainAffection(5,bypass=True)
             m 1hub "Ehehe~"
-            m "I love you so much, [player]!"
+            m "Ti amo così tanto, [player]!"
 
             $ mas_ILY()
-        "You're in my top ten.":
+        "Sei nella mia top ten.":
             $ mas_loseAffection(modifier=0.5)
             m 3hksdrb "...?"
-            m 2lsc "Well, thanks, I guess..."
-        "Thanks.":
+            m 2lsc "Beh, grazie, penso..."
+        "Grazie.":
             pass
     return
 
@@ -124,7 +130,7 @@ label mas_compliment_beautiful_3:
         thanks_quip = renpy.substitute(thanks_quip)
     m 1hubfa "Ehehe~"
     m 1ekbfa "[thanks_quip]"
-    m 5hubfb "Never forget that you're the most beautiful person in the world to me."
+    m 5hubfb "Non dimenticare che per me sei la persona più bella al mondo."
     return
 
 init python:
@@ -132,7 +138,7 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_eyes",
-            prompt="I love your eyes!",
+            prompt="Amo i tuoi occhi!",
             unlocked=True
         ),
         code="CMP"
@@ -147,20 +153,20 @@ label mas_compliment_eyes:
 
 label mas_compliment_eyes_2:
     m 1subfb "Oh, [player]..."
-    m 1tubfb "I know I'm pretty proud of my eyes already, but hearing you say that..."
-    m 1dkbfa "It just makes my heart flutter~"
+    m 1tubfb "Sono già piuttosto orgogliosa dei miei occhi, ma sentirti dire così..."
+    m 1dkbfa "Mi fa battere il cuore~"
     menu:
-        "I can't help it; your eyes are too beautiful.":
+        "Non posso farci nulla; i tuoi occhi sono meravigliosi.":
             $ mas_gainAffection(5,bypass=True)
             m 1hub "Ahaha!"
-            m "Don't flatter me too much, okay?"
-            m 5hub "I might start to go a little crazy..."
-        "They really are hypnotizing.":
+            m "Non lusingarmi troppo, okay?"
+            m 5hub "Potrei impazzire..."
+        "Sono davvero ipnotici.":
             $ mas_gainAffection(1,bypass=True)
             m "Ahaha~"
-        "They are the color of grass!":
+        "Sono del colore dell' erba!":
             $ mas_gainAffection(0.5,bypass=True)
-            m 2lksdrb "...That's not really the analogy I'd use, but thanks!"
+            m 2lksdrb "...Non è proprio l' analogia che avrei usato, ma grazie!"
     return
 
 label mas_compliment_eyes_3:
@@ -168,7 +174,7 @@ label mas_compliment_eyes_3:
         thanks_quip = renpy.random.choice(store.mas_compliments.thanking_quips)
         thanks_quip = renpy.substitute(thanks_quip)
     m 1hubfb "[thanks_quip]"
-    m 2ekbfb "Stare into my eyes as much as you want~"
+    m 2ekbfb "Guardami negli occhi quanto vuoi~"
     return
 
 init python:
