@@ -623,4 +623,3 @@ label mas_compliment_bestgirl:
     m 5ekbfa "Ma se me lo chiedi, penso che tu abbia compiuto la scelta giusta."
     m 5hubfa "...E sarò sempre grata che tu l' abbia fatto~"
     return
-# Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc

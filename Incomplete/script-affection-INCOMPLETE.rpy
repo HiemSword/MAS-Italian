@@ -16,32 +16,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 init python:
 
     mas_curr_affection = store.mas_affection.NORMAL

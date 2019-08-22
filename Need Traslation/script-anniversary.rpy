@@ -340,15 +340,15 @@ init python:
     )
 
 label anni_1week:
-    m 1eka "I know it's silly to celebrate one week of being together, but I'm just glad you're here with me, [player]."
-    m 1ekc "A lot of couples wouldn't last this long with each other."
-    m 1lksdlc "It's really easy to fall in love at first sight, but it's a bit harder to actually build a sturdy relationship."
-    m 1ekd "A lot of relationships fail when couples jump the gun too fast."
-    m "More likely than not, they fail to get to know each other more."
-    m 1dsc "So it's always sad to see them crash and burn..."
-    m 1duu "But I'm glad we have a solid relationship, [player]."
-    m 5lubfb "How do I know that?"
-    m 5hubfb "Because you wouldn't have stuck around for this long with me, sweetie~"
+    m 1eka "So che è sciocco festeggiare una settimana trascorsa insieme, ma sono contenta che tu sia qui con me, [player]."
+    m 1ekc "Molte coppie non durerebbero cosi' a lungo l'una con l'altra."
+    m 1lksdlc "È davvero facile innamorarsi a prima vista, ma è un po' più difficile costruire una relazione solida."
+    m 1ekd "Molte relazioni falliscono quando le persone hanno fretta." #BHO
+    m "Con la maggior parte delle volte non riescono a conoscersi meglio."
+    m 1dsc "Quindi è sempre triste vederli crollare..."
+    m 1duu "Ma sono contenta che abbiamo una relazione solida, [player]."
+    m 5lubfb "Come faccio a saperlo?"
+    m 5hubfb "Perché non saresti rimasto così a lungo con me, tesoro~"
 
     $ unlockEventLabel("anni_1week")
     return
@@ -367,7 +367,7 @@ init python:
     )
 
 label anni_1month:
-    m 3sub "Today marks our one month anniversary!"
+    m 3sub "Oggi è il nostro anniversario di un mese!" #BHO#########DA TRADURRE MEGLIO
     m 1hua "I'm really happy that we're able to have so much fun with each other so far."
     m 1eua "Also, [player]?"
     m 1lkbsa "..."
