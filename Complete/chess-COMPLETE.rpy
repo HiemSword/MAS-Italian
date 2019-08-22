@@ -1,6 +1,4 @@
-###########################################
-###  Traslated in italian by Moon595  ###
-###########################################
+
 
 default persistent._mas_chess_stats = {"wins": 0, "losses": 0, "draws": 0}
 
