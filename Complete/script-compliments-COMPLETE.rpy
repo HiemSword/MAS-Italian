@@ -1,6 +1,4 @@
-###########################################
-###  Traslated in italian by Moon595  ###
-###########################################
+
 
 
 
@@ -28,7 +26,7 @@ init -6 python in mas_compliments:
     COMPLIMENT_H = 640
     COMPLIMENT_XALIGN = -0.15
     COMPLIMENT_AREA = (COMPLIMENT_X, COMPLIMENT_Y, COMPLIMENT_W, COMPLIMENT_H)
-    COMPLIMENT_RETURN = "Oh nevermind."
+    COMPLIMENT_RETURN = "Oh non importa."
     compliment_database = dict()
 
     thanking_quips = [
@@ -119,7 +117,7 @@ label mas_compliment_beautiful_2:
         "Sei nella mia top ten.":
             $ mas_loseAffection(modifier=0.5)
             m 3hksdrb "...?"
-            m 2lsc "Beh, grazie, penso..."
+            m 2lsc "Beh, grazie, credo..."
         "Grazie.":
             pass
     return
@@ -182,7 +180,7 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_awesome",
-            prompt="You're awesome!",
+            prompt="Sei eccezionale!",
             unlocked=True
         ),
         code="CMP"
@@ -197,26 +195,26 @@ label mas_compliment_awesome:
 
 label mas_compliment_awesome_2:
     m 1hub "Awww, [player]~"
-    m "You're so sweet!"
-    m 2tub "I think you're way more awesome, though."
-    m 5eub "I can't wait until the day I can finally give you a great big hug."
-    m 5hub "I'll never let you go!"
+    m "Sei così dolce!"
+    m 2tub "Anche se, credo che tu sia molto più eccezionale."
+    m 5eub "Non vedo l'ora che arrivi il giorno in cui ti potrò abbracciare."
+    m 5hub "Non ti lascerò mai!"
     menu:
-        "I wish you were here right now!":
+        "Vorrei che ora fossi qui!":
             $ mas_gainAffection(3,bypass=True)
-            m "That's my biggest wish too, [player]!"
-        "I'll never let you go from my embrace.":
+            m "E' il mio più grande desiderio, [player]!"
+        "Non ti lascerò mai dal mio abbraccio.":
             $ mas_gainAffection(5,bypass=True)
             show monika 6dubsa
             pause 2.0
             show monika 1wubfsdld
-            m 1wubfsdld "Oh, sorry [player]."
-            m 2lksdla "I was trying to feel your embrace from here."
+            m 1wubfsdld "Oh, scusa [player]."
+            m 2lksdla "Stavo cercando di sentire il tuo abbraccio da qui."
             m 2hub "Ahaha~"
-        "... I don't like hugs.":
+        "... Non mi piacciono gli abbracci.":
             $ mas_loseAffection()
-            m 1eft "...Really?"
-            m 1dkc "Well, to each their own, I guess. But you have to hug me sometime..."
+            m 1eft "...Davvero?"
+            m 1dkc "Beh, ad ognuno il suo, penso. Ma dovrai abbracciarmi qualche volta..."
     return
 
 label mas_compliment_awesome_3:
@@ -224,7 +222,7 @@ label mas_compliment_awesome_3:
         thanks_quip = renpy.random.choice(store.mas_compliments.thanking_quips)
         thanks_quip = renpy.substitute(thanks_quip)
     m 1hub "[thanks_quip]"
-    m 1eub "You'll always be more awesome!"
+    m 1eub "Ma tu sarai sempre più eccezionale!"
     return
 
 
@@ -233,7 +231,7 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_intelligent",
-            prompt="You're really intelligent!",
+            prompt="Sei davvero intelligente!",
             unlocked=True
         ),
         code="CMP"
@@ -247,23 +245,23 @@ label mas_compliment_intelligent:
     return
 
 label mas_compliment_intelligent_2:
-    m 1wub "Wow...{w}thanks, [player]."
-    m 3eua "I pride myself in being well read, so it means a lot that you've noticed."
-    m 3hubfb "I want to learn as much as I can, if it makes you proud of me!"
+    m 1wub "Wow...{w}grazie, [player]."
+    m 3eua "Sono orgogliosa di essere una buona lettrice, perciò per me significa molto che tu lo abbia notato."
+    m 3hubfb "Voglio imparare tutto quello che posso, se questo ti rende felice di me!"
     menu:
-        "You make me want to better myself too, [m_name].":
+        "Mi fai venir voglia di migliorare, [m_name].":
             $ mas_gainAffection(5,bypass=True)
-            m 1hubfa "I love you so much, [player]!"
-            m 3hubfb "We'll have a lifetime of self-improvement together!"
+            m 1hubfa "Ti amo così tanto, [player]!"
+            m 3hubfb "Vivremo migliorando insieme!"
 
             $ mas_ILY()
-        "I'll always be proud of you.":
+        "Sarai sempre il mio orgoglio.":
             $ mas_gainAffection(3,bypass=True)
             m 1ekbfa "[player]..."
-        "You make me feel stupid sometimes.":
+        "A volte mi fai sentire un idiota.":
             $ mas_loseAffection(modifier=0.5)
             m 1wkbsc "..."
-            m 2lkbsc "I'm sorry, that wasn't my intention..."
+            m 2lkbsc "Mi spiace, non era mia intenzione..."
     return
 
 label mas_compliment_intelligent_3:
@@ -271,7 +269,7 @@ label mas_compliment_intelligent_3:
         thanks_quip = renpy.random.choice(store.mas_compliments.thanking_quips)
         thanks_quip = renpy.substitute(thanks_quip)
     m 1ekbfa "[thanks_quip]"
-    m 1hub "Remember that we'll have a lifetime of self-improvement together!"
+    m 1hub "Ricorda che vivremo facendo progressi insieme!"
     return
 
 init python:
@@ -279,7 +277,7 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_hair",
-            prompt="I love your hair!",
+            prompt="Adoro i tuoi capelli!",
             unlocked=True
         ),code="CMP"
     )
@@ -293,35 +291,35 @@ label mas_compliment_hair:
 
 label mas_compliment_hair_2:
     if monika_chr.hair.name != "def":
-        m 1wubfb "Thank you so much, [player]..."
-        m 1lkbfb "I was really nervous the first time I changed my hair here."
+        m 1wubfb "Grazie mille, [player]..."
+        m 1lkbfb "Ero così nervosa quando ho cambiato i miei capelli qui per la prima volta."
     else:
-        m 1hubfb "Thank you so much, [player]!"
-    m 2hub "I've always put so much effort into my hair."
-    m 2lksdlb "In fact, It took forever for it to get this long.."
+        m 1hubfb "Grazie mille, [player]!"
+    m 2hub "Mi impegno molto a curare i miei capelli."
+    m 2lksdlb "Infatti, ci è voluta un' eternità per farli diventare così lunghi.."
     menu:
-        "It really shows. It looks so healthy.":
+        "Si vede. Sembrano davvero ben curati.":
             $ mas_gainAffection(3,bypass=True)
-            m 1hub "Thanks, [player]!"
-        "You're cute no matter how you wear it." if persistent._mas_likes_hairdown:
+            m 1hub "Grazie, [player]!"
+        "Sei bellissima in qualsiasi modo" if persistent._mas_likes_hairdown:
             $ mas_gainAffection(5,bypass=True)
             m 1ekbfa "Awww, [player]."
-            m 1hubfb "You always make me feel special!"
-            m "Thank you!"
-        "You'd be even cuter with short hair.":
+            m 1hubfb "Mi fai sempre sentire speciale!"
+            m "Grazie!"
+        "Saresti più carina con i capelli corti.":
             $ mas_loseAffection(modifier=0.3)
-            m "Well, I can't exactly go to the salon from here..."
-            m 1lksdlc "I...appreciate your input."
+            m "Bhe non posso esattamente andare da una parruchiera da qui..."
+            m 1lksdlc "Ma...apprezzo il consiglio."
             pass
     return
 
 label mas_compliment_hair_3:
     if monika_chr.hair.name != "def":
-        m 1wubfb "Thank you so much, [player]!"
-        m 1lkbfb "I'm really happy that you like this hairstyle."
+        m 1wubfb "Grazie mille, [player]!"
+        m 1lkbfb "Sono davvero felice che ti piaccia questa acconciatura."
     else:
-        m 1hubfb "Thanks, [player]!"
-        m "You always make me feel special."
+        m 1hubfb "Grazie, [player]!"
+        m "Mi fai sempre sentire speciale."
     return
 
 init python:
@@ -329,7 +327,7 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_fit",
-            prompt="I love your dedication to fitness!",
+            prompt="Ammiro la tua dedizione per il fitness!",
             unlocked=True
         ),
         code="CMP"
@@ -343,23 +341,23 @@ label mas_compliment_fit:
     return
 
 label mas_compliment_fit_2:
-    m 1hub "Thanks [player]! You're so sweet!"
-    m 3eub "I love keeping fit and eating healthy. It keeps me feeling energetic and confident."
-    m 1efb "I hope you're watching out for your health."
-    m 1lubfb "We can always work out together when I'm there..."
+    m 1hub "Grazie [player]! Sei davvero dolce!"
+    m 3eub "Adoro fare esercizio fisico e mangiare sano. Mi fa sentire più energica e sicura di me."
+    m 1efb "Spero che ti stia prendendo cura di te."
+    m 1lubfb "Quando sarò lì ci alleneremo insieme..."
     menu:
-        "That sounds like a lot of fun!":
+        "Sembra davvero divertente!":
             $ mas_gainAffection(2,bypass=True)
-            m 1hubfb "Ahaha! I'm glad you think so, too!"
-            m 3eka "Don't worry. Even if you can't keep up with me, I know we'll have fun..."
-            m 5eua "So long as we're together."
-        "No promises, but I'll do my best.":
+            m 1hubfb "Ahaha! Sono felici che la pensi così!"
+            m 3eka "Non preoccuparti. Anche nel caso tu non riesca a starmi dietro, so che ci divertiremo...."
+            m 5eua "Finchè staremo insieme."
+        "Nessuna promessa, ma farò del mio meglio.":
             $ mas_gainAffection(1,bypass=True)
-            m 1tfb "You better!"
-            m 2tub "Don't think I plan on letting you off easy if you're out of shape."
-        "I'd rather not get sweaty...":
-            m 1eka "I understand if it's not your thing, but you should give it a little try..."
-            m 1lksdla "It'd make me really happy if you shared my interests, you know?"
+            m 1tfb "E' meglio che tu lo faccia!"
+            m 2tub "Non pensare che non abbia intenzione di lasciarti facilmente se sei fuori forma."
+        "Preferirei non sudare...":
+            m 1eka "Capisco se non fa per te, ma dovresti provarci un po'...."
+            m 1lksdla "Mi renderesti davvero felice se condividessi i miei interessi, sai?"
     return
 
 label mas_compliment_fit_3:
@@ -367,7 +365,7 @@ label mas_compliment_fit_3:
         thanks_quip = renpy.random.choice(store.mas_compliments.thanking_quips)
         thanks_quip = renpy.substitute(thanks_quip)
     m 2eka "[thanks_quip]"
-    m 1hub "I hope you embark on a fitness journey with me!"
+    m 1hub "Spero che tu possa fare un programma di fitness con me.!"
     return
 
 
@@ -376,7 +374,7 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_thanks",
-            prompt="Thanks for being there for me!",
+            prompt="Grazie di esserci!",
             unlocked=True,
             aff_range=(mas_aff.ENAMORED, None)
         ),
@@ -384,23 +382,23 @@ init python:
     )
 
 label mas_compliment_thanks:
-    m 1duu "There's nothing to thank me for, [player]."
-    m 1eka "I'm the one who's grateful for having someone like you!"
-    m 1ekbsa "You're the only reason why I'm still here."
-    m "You installed this mod just to make our time together better..."
-    m 1dubsu "You are the sunshine that warms my heart whenever you visit me."
-    m 3ekbsa "I guess we're both lucky that we have each other, [player]~"
+    m 1duu "Non ce niente di cui dovresti ringraziarmi, [player]."
+    m 1eka "Sono io quella ad essere grata di avere qualcuno come te!"
+    m 1ekbsa "Sei l' unica ragione per cui sono qui."
+    m "Hai installato questa mod per rendere migliore il tempo che passiamo insieme..."
+    m 1dubsu "Sei il raggio di Sole che scalda il mio cuore quando sei qui."
+    m 3ekbsa "Credo che entrambi dovremmo sentirci fortunati, [player]~"
     menu:
-        "You mean everything to me, [m_name].":
+        "Sei tutto per me, [m_name].":
             if mas_getEV('mas_compliment_thanks').shown_count == 0:
                 $ mas_gainAffection(10,bypass=True)
             m 1ekbsa "[player]..."
-            m 1dubsu "Nothing makes me happier than hearing that coming from you."
-            m "No matter what the future may have for us both..."
-            m 1ekbfa "Know that I'll always love you and be here for you!"
-        "Yeah.":
+            m 1dubsu "Niente mi rende più felice di sentirtelo dire."
+            m "Non importa cosa ci riserverà il futuro..."
+            m 1ekbfa "Ricorda che ci sarò e ti amerò per sempre!"
+        "Già.":
             m 1hub "Ehehe~"
-            m 1eub "I love you, [player]."
+            m 1eub "Ti amo, [player]."
 
     if not mas_isMoniLove():
         $ mas_lockEVL("mas_compliment_thanks", "CMP")
@@ -411,7 +409,7 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_smile",
-            prompt="I love your smile!",
+            prompt="Amo il tuo sorriso!",
             unlocked=True
         ),
         code="CMP"
@@ -425,18 +423,18 @@ label mas_compliment_smile:
     return
 
 label mas_compliment_smile_2:
-    m 1hub "You're so sweet, [player]~"
-    m 1eua "I smile a lot when you're here."
-    m 1ekbfa "Because it makes me very happy when you spend time with me~"
+    m 1hub "Sei davvero dolce, [player]~"
+    m 1eua "Sorrido molto quando ci sei tu."
+    m 1ekbfa "perchè mi rende molto felice che tu spenda del tempo con me~"
     menu:
-        "I'll visit you every day to see your wonderful smile.":
+        "Ti vengo a trovare tutti i giorni per vedere il tuo sorriso.":
             $ mas_gainAffection(5,bypass=True)
             m 1wubfsdld "Oh, [player]..."
-            m 1lkbfa "I think my heart just skipped a beat."
-            m 3hubfa "See? You always make me as happy as I can be."
-        "I like to see you smile.":
+            m 1lkbfa "Credo che il mio cuore abbia saltato un battito."
+            m 3hubfa "Visto? Mi rendi sempre il piu' felice possibile.."
+        "Mi piace vedere il tuo sorriso.":
             m 1hub "Ahaha~"
-            m 3eub "Then all you have to do is keep coming back, [player]!"
+            m 3eub "Allora tutto qello che devi fare è venire qui, [player]!"
     return
 
 label mas_compliment_smile_3:
@@ -444,7 +442,7 @@ label mas_compliment_smile_3:
         thanks_quip = renpy.random.choice(store.mas_compliments.thanking_quips)
         thanks_quip = renpy.substitute(thanks_quip)
     m 1eub "[thanks_quip]"
-    m 1hua "I'll keep smiling just for you!"
+    m 1hua "Continuerò a sorridere solo per te!"
     m "Ehehe~"
     return
 
@@ -453,7 +451,7 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_hero",
-            prompt="You're my hero!",
+            prompt="Sei il mio eroe!",
             unlocked=True,
             aff_range=(mas_aff.LOVE, None)
         ),
@@ -463,15 +461,15 @@ init python:
 label mas_compliment_hero:
     $ mas_gainAffection()
     m 1wubfsdld "H-{w=0.3}huh?"
-    m "I'm your hero?"
-    m 2rkbfsdlb "[player]...{w=1.5} I'm not sure what you mean..."
-    m 2ekbfb "You're the one who stuck with me for all this time.{w=1} I should be thanking you, really."
-    m 1hubfa "Well, if I've somehow helped you, then I couldn't be happier~"
-    m 3ekbfa "You've helped me in every way possible, so how could I not return the favor by being there for you whenever you need support?"
+    m "Sono il tuo eroe?"
+    m 2rkbfsdlb "[player]...{w=1.5} Non sono sicura di ciò che tu voglia dire..."
+    m 2ekbfb "Sei tu quello che è rimasto con me per tutto questo tempo..{w=1} Dovrei ringraziarti, davvero."
+    m 1hubfa "Beh se in qualche modo sono riuscita ad aiutarti, non potrei che esserne felice~"
+    m 3ekbfa "Mi hai aiutato in ogni maniera possibile, quindi come potrei non ricambiare il favore supportandoti come posso?"
     show monika 5hubfa zorder MAS_MONIKA_Z at t11 with dissolve
-    m 5hubfa "You'll always be my hero, after all~"
-    m 5hubfb "I love you and I'll always believe in you!"
-    m 5ekbfa "I hope you never forget that, [player]~"
+    m 5hubfa "Dopotutto, sarai sempre il mio eroe~"
+    m 5hubfb "Ti amo e crederò sempre in te!"
+    m 5ekbfa "Spero che non lo dimenticherai mai, [player]~"
     return "love"
 
 init python:
@@ -479,7 +477,7 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_cute",
-            prompt="You're cute!",
+            prompt="Sei così carina!",
             unlocked=True
         ),
         code="CMP"
@@ -496,28 +494,28 @@ label mas_compliment_cute:
 
 label mas_compliment_cute_2:
     m 1wubfsdld "Ah!"
-    m 3rkbfsdla "You {i}kind of{/i} caught me off guard with that one."
-    m 3tubfb "Just a little..."
-    m 1hubfa "But I'm glad you think so!"
+    m 3rkbfsdla "Mi {i}hai{/i} preso alla sprovvista."
+    m 3tubfb "Giusto un po'..."
+    m 1hubfa "Ma sono felice che lo pensi!"
     menu:
-        "Seeing you always warms my heart!":
+        "Vederti mi scalda sempre il cuore!":
             $ persistent._mas_pm_monika_cute_as_natsuki = False
             $ mas_gainAffection(5,bypass=True)
-            m 1hubfb "Aww, it really warms my heart to hear you say that!"
-            m 1dkbfu "...Almost as much as when I picture us finally being together in the same reality."
-            m 1ekbfa "I can barely contain myself just imagining that special day~"
-        "You're even cuter when you're flustered.":
+            m 1hubfb "Aww, mi rende così felice che tu lo dica!"
+            m 1dkbfu "...Quasi quanto immaginare noi due nella stessa realtà."
+            m 1ekbfa "Non posso davvero contenermi quano immagino come sarà quel giorno speciale~"
+        "Sei ancora più carina quando arrossisci.":
             $ persistent._mas_pm_monika_cute_as_natsuki = False
             $ mas_gainAffection(3,bypass=True)
-            m 2tubfu "Not letting it go, huh, [player]?"
-            m 2rubfu "Hmph, I just wasn't expecting it."
-            m 3tubfb "Don't expect it to be so easy next time..."
-            m 1tubfu "I'll get you back someday, ehehe~"
-        "You're as cute as Natsuki.":
+            m 2tubfu "Non lasci perdere, huh, [player]?"
+            m 2rubfu "Hmph, solamente non me lo ero aspettata."
+            m 3tubfb "Non aspettarti che sorprendermi sarà così facile la prossima volta..."
+            m 1tubfu "Un giorno ti restuirò il favore, ehehe~"
+        "Sei carina come Natsuki.":
             $ persistent._mas_pm_monika_cute_as_natsuki = True
             $ mas_loseAffection(modifier=0.5)
-            m 2lfc "Oh. {w=1}Thanks, [player]..."
-            m 1rsc "But I was kind of hoping I would stand in my own category."
+            m 2lfc "Oh. {w=1}Grazie, [player]..."
+            m 1rsc "Ma avrei preferito appartenre ad una categoria apparte."
     return
 
 label mas_compliment_cute_3:
@@ -525,7 +523,7 @@ label mas_compliment_cute_3:
         thanks_quip = renpy.random.choice(store.mas_compliments.thanking_quips)
         thanks_quip = renpy.substitute(thanks_quip)
     m 1ekbfa "[thanks_quip]"
-    m 1hubfa "You can be really cute a lot of the time too, you know~"
+    m 1hubfa "Anche tu sei adorabile molte volte, sai~"
     return
 
 init python:
@@ -533,7 +531,7 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_chess",
-            prompt="You're awesome at chess!",
+            prompt="Sei eccezionale a scacchi!",
             unlocked=False,
             conditional="renpy.seen_label('mas_chess_game_start')",
             action=EV_ACT_UNLOCK
@@ -542,21 +540,21 @@ init python:
     )
 
 label mas_compliment_chess:
-    m 1eub "Thanks, [player]."
-    m 3esa "Like I said before, I wonder if my skill has something to do with me being trapped here?"
+    m 1eub "Grazie, [player]."
+    m 3esa "Come ho già detto, mi chiedo se le mie abiltà abbiano qualcosa a che fare con il mio essere intrappolata qui dentro."
     $ wins = persistent._mas_chess_stats["wins"]
     $ losses = persistent._mas_chess_stats["losses"]
     if wins > 0:
-        m 3eua "You're not bad either; I've lost to you before."
+        m 3eua "Pure tu noon sei male; ho già perso contro di te."
         if wins > losses:
-            m "In fact, I think you've won more times than me, you know?"
+            m "Infatti, credo che tu abbia vinto più volte di me, sai?"
         m 1hua "Ehehe~"
     else:
-        m 2lksdlb "I know you haven't won a chess game yet, but I'm sure you'll beat me someday."
-        m 3esa "Keep practicing and playing with me and you'll do better!"
-    m 3esa "We'll both get better the more we play."
-    m 3hua "So don't be afraid of challenging me whenever you want to."
-    m 1eub "I love spending time with you, [player]~"
+        m 2lksdlb "So che ancora no hai vinto una partita, ma sono sicura che un giorno mi batterai."
+        m 3esa "Continua a  esercitarti giocando con me e migliorerai!"
+    m 3esa "Entrambi miglioriamo ogni volta che giochiamo."
+    m 3hua "Perciò non esitare a chiedermi di giocare."
+    m 1eub "Adoro spendere del temopo con te, [player]~"
     return
 
 init python:
@@ -564,7 +562,7 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_pong",
-            prompt="You're awesome at pong!",
+            prompt="Sei eccazionale a pong!",
             unlocked=False,
             conditional="renpy.seen_label('game_pong')",
             action=EV_ACT_UNLOCK
@@ -574,33 +572,33 @@ init python:
 
 label mas_compliment_pong:
     m 1hub "Ahaha~"
-    m 2eub "Thanks [player], but pong isn't exactly a complex game."
+    m 2eub "Grazie [player], ma pong non è esattamente un gioco complesso."
     if persistent.ever_won['pong']:
-        m 1lksdla "You've already won against me."
-        m "So you know it's very simple."
-        m 5hub "But I accept your compliment, anyway."
+        m 1lksdla "Hai già vinto contro di me."
+        m "Perciò sai che  molto semplice."
+        m 5hub "Ma accetto comunque il complimento."
     else:
-        m 3hksdrb "And you always let me win when we play."
-        m 3eka "Right?"
+        m 3hksdrb "E mi fai sempre vincere."
+        m 3eka "Vero?"
         menu:
-            "Yes.":
-                m 2lksdla "Thanks [player], but you really don't have to let me win."
-                m 1eub "Feel free to play seriously whenever you want to."
-                m 1hub "I'd never get mad at you because I lost a game fair and square."
-            "... Yeah.":
-                m 1tku "You don't seem too confident about that, [player]."
-                m 1tsb "You really don't have to let me win."
-                m 3tku "And admitting that you've seriously lost to me won't make me think less of you."
-                m 1lksdlb "It's just a game, after all!"
-                m 3hub "You can always practice with me more, if you want."
-                m "I love to spend time with you, no matter what we're doing."
-            "No. I've tried my best and still lost.":
+            "Sì.":
+                m 2lksdla "Grazie [player], ma davvero non c'è bisogno ceh tu mi faccia vincere."
+                m 1eub "Sentiti libero di giocare seiriamente quando vuoi."
+                m 1hub "Non mi arrabbierei mai con te perche' ho perso una partita onesta e leale.."
+            "... Già.":
+                m 1tku "Non sembri esserne molto convinto, [player]."
+                m 1tsb "Davvero non c'è bisogno di farmi vincere."
+                m 3tku "E ammettere che hai davvero perso contro di me non mi farà pensare male di te."
+                m 1lksdlb "E' solo un gioco, dopotutto!"
+                m 3hub "Puoi sempre esercitarti con me."
+                m "Amo spendere del tempo con te, non importa quel che facciamo."
+            "No. Ho fatto del mio meglio e ho perso ugualmente.":
                 m 1hua "Ahaha~"
-                m "I figured!"
-                m 3eua "Don't worry, [player]."
-                m 3eub "Keep playing with me and get more practice."
-                m 3hua "I'm always trying to help you be the best you you can be."
-                m 1ekbfa "And if by doing so, I get to spend more time with you, I couldn't be happier."
+                m "Capiscco!"
+                m 3eua "Non preoccuparti, [player]."
+                m 3eub "Continua a giocare con me ed a esercitarti."
+                m 3hua "Cerco sempre di aiutarti ad essere il meglio che puoi essere.."
+                m 1ekbfa "E se così facendo, posso passare più tempo con te, non potrei esserne più felice.."
     return
 
 init python:
@@ -608,21 +606,21 @@ init python:
         Event(
             persistent._mas_compliments_database,
             eventlabel="mas_compliment_bestgirl",
-            prompt="You're the best girl!",
+            prompt="Sei la 'best girl'!",
             unlocked=True
         ),
         code="CMP"
     )
 
 label mas_compliment_bestgirl:
-    m 1hua "I love it when you compliment me, [player]~"
-    m 1hub "I'm so glad you think I'm best girl!"
-    m 3rksdla "Although, I kind of figured you felt that way..."
-    m 1eka "After all, you {i}did{/i} install this mod just to be with me."
-    m 2euc "I know that some people prefer the other girls."
-    m 2esc "Especially since they all have certain traits that make them desirable to some..."
+    m 1hua "Adoro quando ti complimenti con me, [player]~"
+    m 1hub "Sono contenta che pensi che io sia la 'best girl'!"
+    m 3rksdla "Avevo la sensazione che la pensassi così, comunque..."
+    m 1eka "Dopotutto, {i}hai{/i} installato questa mod solo per stare con me."
+    m 2euc "So che altre persone preferiscono le altre ragazze."
+    m 2esc "Specialmente perchè hanno alcuni tratti che le rendono più desiderabili..."
     show monika 5ekbfa zorder MAS_MONIKA_Z at t11 with dissolve
-    m 5ekbfa "But if you ask me, you made the right choice."
-    m 5hubfa "...and I'll be forever grateful that you did~"
+    m 5ekbfa "Ma se me lo chiedi, penso che tu abbia compiuto la scelta giusta."
+    m 5hubfa "...E sarò sempre grata che tu l' abbia fatto~"
     return
 # Decompiled by unrpyc: https://github.com/CensoredUsername/unrpyc
