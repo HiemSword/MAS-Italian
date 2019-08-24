@@ -1,12 +1,3 @@
-##################################################################################
-###  ATTENZIONE! NON MODIFICARE QUESTO FILE SENZA IL MIO CONSENSO (HiemSword)  ###
-###                                                                            ###
-###  Da fare:                                                                  ###
-###                                                                            ###
-###   -Cambiare nome versione ha qualcosa con in mezzo "it" [Non farlo]        ###
-###                                                                            ###
-###   -Cambiare o disattivare l'updater in quanto puo corrompere le traduzioni ###
-##################################################################################
 
 
 
