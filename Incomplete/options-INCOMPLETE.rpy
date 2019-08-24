@@ -29,7 +29,7 @@ define gui.show_name = False
 
 
 
-define config.version = "0.9.5-unstable.2019.07.27.103"
+define config.version = "0.9.5.2019.07.27.103" #"0.9.5-unstable.2019.07.27.103"
 
 
 
