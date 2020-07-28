@@ -1,3 +1,4 @@
+[![Run on Repl.it](https://repl.it/badge/github/HiemSword/MAS-Italian)](https://repl.it/github/HiemSword/MAS-Italian)
 ![Logo MAS-ITA](https://github.com/HiemSword/MAS-Italian/blob/master/ModAssets/DDLC-MAS-ITA.png)
 
 # Monika After Story Italian (MAS-IT)
